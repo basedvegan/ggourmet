@@ -1,6 +1,10 @@
 // Dependencies
+require('dotenv').config();
+
+var keys = require("./keys.js");
 var express = require("express");
 var exphbs = require("express-handlebars");
+
 
 // Create an instance of the express app.
 var app = express();
