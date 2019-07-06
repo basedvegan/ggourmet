@@ -1,5 +1,5 @@
 
-console.log('this is loaded');
+// console.log('this is loaded');
 
 exports.mysql = {
     id: process.env.MYSQL_ID,
