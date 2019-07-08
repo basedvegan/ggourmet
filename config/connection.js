@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     user: process.env.DB_USER,
     //DB_PASS
     password: process.env.DB_PASS,
-    database: "cat_db"
+    database: "ggourmet_db"
 });
 
 // Make connection.
