@@ -7,11 +7,11 @@ var router = express.Router();
 var cat = require("../models/index.js");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/home", function (req, res) {
+router.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../public/blog.html"));
 });
 
-router.get("/", function (req, res) {
+router.get("/admin", function (req, res) {
   cat.all(function (data) {
     var hbsObject = {
       cats: data
