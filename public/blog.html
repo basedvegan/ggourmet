@@ -3,36 +3,192 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Blog - Express</title>
+  <title>GGourmet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Latest compiled and minified CSS & JS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title">
+
 </head>
 
 <body>
-  <div class="container">
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="form-group">
-          <select class="custom-select" id="category">
-            <option selected value="">All Categories</option>
-            <option value="Personal">Personal</option>
-            <option value="Product Review">Product Review</option>
-            <option value="Political">Political</option>
-          </select>
+  
+  <!-- navbar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="assets/img/logosmall.png" class="img-responsive"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end nav -->
+
+  <!-- img slider -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="assets/img/mountains.png">
+        <div class="carousel-caption">
+          <h1>GGOURMET LA</h1>
+          <br>
+          <button type="button" class="btn btn-default"> Get Started</button>
         </div>
       </div>
-      <div class="col-md-2">
-        <a class="btn btn-light" href="/admin">New Post</a>
+      <!--end active-->
+      <div class="item">
+        <img src="assets/img/snow.png">
+      </div>
+      <div class="item">
+        <img src="assets/img/red.png">
       </div>
     </div>
+    <!-- start slider controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> <!-- end slider -->
+
+  <div class="container text-center">
+    <h2>What we are using</h2>
     <div class="row">
-      <div class="col-md-12 blog-container">
+      <div class="col-sm-4">
+        <img src="assets/img/html5.png" id="icon">
+        <h4>HTML5</h4>
       </div>
-    </div>
-  </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="assets/img/bootstrap.png" id="icon">
+          <h4>BOOTSTRAP</h4>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="assets/img/css3.png" id="icon">
+            <h4>CSS3</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-left">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Here is the cool thing about weed:</h4>
+            <p>Pass the duchie Bob Marley this shatter is hella potent. Legalize spliffs for recreational Snoop Dogg
+              edibles pusher cannabidiol cartoons. The cannabis industry will gravity bong a cotton mouth pizza dipped
+              in ranch. Rolling down the street smoking endo, laid back. Optimizing dime bags of pre-rolled honey oil
+              dabs.
+            </p>
+            <p>Cerebral high couch lock Abba Zabba you my only friend. Just give us the
+              whizzaa! Hot box at 4:20 the fatty dank endo doobie in a cashed roachclip, Bogart. Fully man, keif gummies
+              are the indoor equivalent of body high super mellow. Guatemalan purple haze grown outdoors by ganja
+              shaman.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="assets/img/bootstrap2.jpg" class="img-responsive">
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-left">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <h4>built with sass</h4>
+            <p>Wake and bake indica hash at the dispensary in Oregon decriminalized. Oh my gawd, they like totally know
+              I'm high. Extremely dope chronic eye drops in the basement with psychedellic nugs. Pass the duchie Bob
+              Marley this shatter is hella potent. California kush roll it up into a fat blunt for medicinal purposes to
+              elevate your consciousness.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <img src="assets/img/sass.png" class="img-responsive">
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <h4>and less</h4>
+            <p>Pass the duchie Bob Marley this shatter is hella potent. Legalize spliffs for recreational Snoop Dogg
+              edibles pusher cannabidiol cartoons. The cannabis industry will gravity bong a cotton mouth pizza dipped
+              in ranch. Rolling down the street smoking endo, laid back. Optimizing dime bags of pre-rolled honey oil
+              dabs.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <img src="assets/img/less.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-left">
+        <div class="row">
+          <h4><a href="#hidden" data-toggle="collapse">Care to learn more about bootstrap?</a></h4>
+          <div id="hidden" class="collapse">
+            <h4>Here is the cool thing about weed:</h4>
+            <p>Pass the duchie Bob Marley this shatter is hella potent. Legalize spliffs for recreational Snoop Dogg
+              edibles pusher cannabidiol cartoons. The cannabis industry will gravity bong a cotton mouth pizza dipped
+              in ranch. Rolling down the street smoking endo, laid back. Optimizing dime bags of pre-rolled honey oil
+              dabs.
+            </p>
+            <p>OG grandaddy purps with notes of diesel. Hydroponic nacho pop-tarts tetrahydrocannabinol hybrid schwag
+              stems and seeds little orange hairs. Oh my gawd, they like totally know I'm high. Wake and bake indica
+              hash at the dispensary in Oregon decriminalized. Broccoli bong butterfly gateway drugs to elevate your
+              good vibrations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="container-fluid text-center">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Contact Us</h3>
+            <br>
+            <h4>our address and contact info here</h4>
+          </div>
+          <div class="col-sm-4">
+            <h3>connect</h3>
+            <a href="https://www.facebook.com/pages/GGOURMET/643455852753706?eid=ARAb27yDVjAdCsR7dYqGDQ2EpsZPfwF7Q7d606FNK8KYCbGp3Fi8yIrLHp1hib3Va6YOtzYr_PmIrPvt&timeline_context_item_type=intro_card_work&timeline_context_item_source=643959940&fref=tag"
+              target="_blank" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/ggourmetla/" class="fa fa-instagram"></a>
+          </div>
+          <div class="col-sm-4"></div>
+          <img src="assets/img/menuicon.png" class="icon">
+        </div>
+        <div class="col-sm-4">
+          <a class="btn btn-light" href="/admin">admin</a>
+        </div>
+      </footer>
+
   <!-- Custom Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
   <script src="js/blog.js" type="text/javascript"></script>
