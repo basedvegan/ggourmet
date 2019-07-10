@@ -1,28 +1,28 @@
-var express = require("express");
+// var express = require("express");
 var path = require("path");
 
-var router = express.Router();
+// var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
-var cat = require("../models/index.js");
+// // Import the model (cat.js) to use its database functions.
+var customerModel = require("../models/index.js");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function (req, res) {
+exports.homePage = function (req, res) {
   res.sendFile(path.join(__dirname, "../public/blog.html"));
-});
+};
 
-router.get("/admin", function (req, res) {
-  cat.all(function (data) {
+exports.adminPage = function (req, res) {
+  customerModel.all(function (data) {
     var hbsObject = {
       cats: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
-});
+};
 
-router.post("/api/cats", function (req, res) {
-  cat.create([
+exports.addCustomerPage = function (req, res) {
+  customerModel.create([
     "name", "sleepy"
   ], [
       req.body.name, req.body.sleepy
@@ -30,14 +30,14 @@ router.post("/api/cats", function (req, res) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
     });
-});
+};
 
-router.put("/api/cats/:id", function (req, res) {
+exports.updateCustomerPage = function (req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
-  cat.update({
+  customerModel.update({
     sleepy: req.body.sleepy
   }, condition, function (result) {
     if (result.changedRows == 0) {
@@ -47,12 +47,12 @@ router.put("/api/cats/:id", function (req, res) {
       res.status(200).end();
     }
   });
-});
+};
 
-router.delete("/api/cats/:id", function (req, res) {
+exports.deleteCustomerPage = function (req, res) {
   var condition = "id = " + req.params.id;
 
-  cat.delete(condition, function (result) {
+  customerModel.delete(condition, function (result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -60,7 +60,5 @@ router.delete("/api/cats/:id", function (req, res) {
       res.status(200).end();
     }
   });
-});
+};
 
-// Export routes for server.js to use.
-module.exports = router;
