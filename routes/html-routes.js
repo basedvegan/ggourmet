@@ -1,7 +1,7 @@
 var path = require("path");
 var express = require('express');
 var router = express.Router();
-var cat = require("../models/index.js");
+// var cat = require("../models/index.js");
 
 var controllers = require('../controllers/controllers');
 
