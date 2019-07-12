@@ -1,41 +1,38 @@
-<div class="container">
+<h1>Customers</h1>
 
-  <h1>Customers</h1>
+<h2>Customers that have not been contacted. </h2>
 
-  <h2>Customers that have not been contacted. </h2>
+<ul>
+  {{#each cats}}
+  {{#unless sleepy}}
+  {{> cats/cat-block sleep=true}}
+  {{/unless}}
+  {{/each}}
+</ul>
 
-  <ul>
-    {{#each cats}}
-    {{#unless sleepy}}
-    {{> cats/cat-block sleep=true}}
-    {{/unless}}
-    {{/each}}
-  </ul>
+<h2>Customers that have been contacted.</h2>
 
-  <h2>Customers that have been contacted.</h2>
+<ul>
+  {{#each cats}}
+  {{#if sleepy}}
+  {{> cats/cat-block sleep=false}}
+  {{/if}}
+  {{/each}}
+</ul>
 
-  <ul>
-    {{#each cats}}
-    {{#if sleepy}}
-    {{> cats/cat-block sleep=false}}
-    {{/if}}
-    {{/each}}
-  </ul>
+<h2>Add a Customer</h2>
+<form class="create-form">
 
-  <h2>Add a Customer</h2>
-  <form class="create-form">
+  <div class="form-group">
+    <label for="ca">Customer Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
 
-    <div class="form-group">
-      <label for="ca">Customer Name:</label>
-      <input type="text" id="ca" name="name">
-    </div>
+  <div class="form-group">
+    <label for="sleepy">Contacted?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Yes!<br>
+    <input type="radio" name="sleepy" value="0"> No
+  </div>
 
-    <div class="form-group">
-      <label for="sleepy">Contacted?</label><br>
-      <input type="radio" name="sleepy" value="1" checked> Yes!<br>
-      <input type="radio" name="sleepy" value="0"> No
-    </div>
-
-    <button class="btn btn-light" type="submit">Add Customer</button>
-  </form>
-</div>
+  <button type="submit">Add Customer</button>
+</form>
